@@ -1,0 +1,124 @@
+.container {
+    min-width:100%;
+    min-height:100%
+}
+.card-border {
+    /* max-width: 45em; */
+    max-width:100%;
+    margin: auto;
+    /* padding: 2em; */
+    background-color: beige;
+}
+/* .profile-pic {
+    width: 20em;
+} */
+.profile-img {
+    display: block;
+    /* min-width:8em; */
+    border-radius: 50%;
+    /* max-width: 100%;
+	height: auto;
+	display: block */
+}
+.person-info,.biz-info {
+    text-align: center;
+}
+.card-border {
+    width: 85%;
+}
+.profile-pic {
+    grid-area: "profile-pic";
+    padding: 1em;
+}
+.person-info {
+    grid-area: "person-info";
+    padding: 1em
+}
+.biz-info {
+    grid-area: "biz-info";
+    padding: 1em
+}
+
+.name,.title,.phone,.biz-name,.slogan {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.name {
+    font-size: large;
+    font-weight: 600;
+}
+.title {
+    font-size: medium;
+    font-style: italic;
+}
+.biz-name {
+    font-size: large;
+    font-weight: 900;
+}
+.phone {
+    font-size: medium;
+}
+.slogan {
+    font-size: smaller;
+    font-style: italic;
+}
+
+
+
+@media screen and (min-width: 500px) {
+    .card-border {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .profile-pic {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .person-info {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2.5;
+        text-align: left;
+    }
+    .biz-info {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2.5;
+        grid-column-end: 4;
+        text-align: right;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card-border {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .profile-pic {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+    .person-info {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: right;
+    }
+    .biz-info {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: right;
+    }
+    .card-border{
+        max-width: 45em;
+    }
+}
